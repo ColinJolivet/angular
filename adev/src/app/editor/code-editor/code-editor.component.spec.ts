@@ -21,7 +21,7 @@ import {CodeEditor, REQUIRED_FILES} from './code-editor.component';
 import {CodeMirrorEditor} from './code-mirror-editor.service';
 import {FakeChangeDetectorRef} from '@angular/docs';
 import {TutorialType} from '@angular/docs';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTooltip} from '@angular/material/tooltip';
 import {MatTooltipHarness} from '@angular/material/tooltip/testing';
 
 const files = [
@@ -53,7 +53,7 @@ describe('CodeEditor', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CodeEditor, NoopAnimationsModule, MatTooltipModule],
+      imports: [CodeEditor, NoopAnimationsModule, MatTooltip],
       providers: [
         {
           provide: CodeMirrorEditor,
